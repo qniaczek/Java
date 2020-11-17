@@ -13,23 +13,21 @@ public class Main {
         int odpowiedz;
 
         Random rnd = new Random();
-        los = rnd.nextInt(100)+1;
+        los = rnd.nextInt(1000)+1;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Zgadnij liczbe od 1 do 100!");
+        System.out.println("Guess number from 1 to 1000");
         do {
             i++;
-            System.out.println("Podaj liczbe: ");
+            System.out.println("Tell me your number: ");
             odpowiedz = scanner.nextInt();
             if(odpowiedz > los) {
-                System.out.println("niestety nie zgadles! Moja liczba jest mniejsza.");
+                System.out.println("Unfortunatelly you did not guess. My number is lower.");
             } else if(odpowiedz <los){
-                System.out.println("niestety nie zgadles! moja liczba jest wieksza");
+                System.out.println("Unfortunatelly you did not guess. My number is higher.");
 
             }
         }while (odpowiedz != los);
-        System.out.println("Brawo odgadles za " +i+ " razem!");
-       // for(int j = 100; j >0; j--){
-        //   System.out.println(rnd.nextInt(10)+1);
+        System.out.println("Congratulations, you guessed.");
         }
     }
